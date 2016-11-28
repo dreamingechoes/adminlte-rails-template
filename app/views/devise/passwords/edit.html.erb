@@ -1,0 +1,22 @@
+<p class="login-box-msg">Change your password</p>
+
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+  <%= devise_error_messages! %>
+  <%= f.hidden_field :reset_password_token %>
+
+  <div class="form-group has-feedback">
+    <%= f.password_field :password, autofocus: true, autocomplete: "off", class: 'form-control', placeholder: 'Password' %>
+    <span class='glyphicon glyphicon-lock form-control-feedback'></span>
+  </div>
+
+  <div class="form-group has-feedback">
+    <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control', placeholder: 'Password Confirmation' %>
+    <span class='glyphicon glyphicon-lock form-control-feedback'></span>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-4">
+      <%= f.submit "Change my password", class: 'btn btn-success btn-block btn-flat' %>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no, minimal-ui"/>
+    <meta name="keywords" content="" />
+    <meta name="title" content="<%= content_for?(:title) ? yield(:title) : Rails.application.secrets[:site_title] %>">
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : Rails.application.secrets[:site_title] %>">
+    <title><%= content_for?(:title) ? yield(:title) : Rails.application.secrets[:site_title] %></title>
+
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
+          <%= render partial: 'shared/navigation' %>
+          <%= yield %>
+          <%= render partial: 'shared/footer' %>
+        </div>
+      </div>
+    </div>
+
+  </body>
+
+  <%= javascript_include_tag 'application' %>
+
+  <% if content_for?(:added_scripts) %>
+    <%= yield :added_scripts %>
+  <% end %>
+</html>

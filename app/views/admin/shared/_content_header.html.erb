@@ -1,0 +1,7 @@
+<section class="content-header">
+  <h1> <%= params[:controller].split('/').last.humanize %> </h1>
+  <ol class="breadcrumb">
+    <li><%= link_to '<i class="fa fa-dashboard"></i> Home'.html_safe, admin_root_path %></li>
+    <li class="active"> <%= params[:controller].split('/').last.humanize %> </li>
+  </ol>
+</section>

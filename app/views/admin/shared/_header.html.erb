@@ -1,0 +1,44 @@
+<header class="main-header">
+  <%= content_tag :a, href: admin_root_path, class: 'logo' do %>
+    <span class="logo-mini">
+    <b>A</b>T</span>
+    <span class="logo-lg">
+    <b>AdminLTE</b>Template</span>
+  <% end %>
+
+  <nav class="navbar navbar-static-top">
+    <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+      <span class="sr-only">Toggle navigation</span>
+    </a>
+
+    <div class="navbar-custom-menu">
+      <ul class="nav navbar-nav">
+        <li class="dropdown user user-menu">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <%= image_tag "http://placehold.it/160x160", class: "user-image" %>
+            <span class="hidden-xs"><%= current_user.name %></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li class="user-header">
+              <%= image_tag "http://placehold.it/160x160", class: "img-circle" %>
+
+              <p>
+                <%= current_user.name %>
+                <small>Member since <%= current_user.created_at.strftime("%B, %Y") %></small>
+              </p>
+            </li>
+
+            <li class="user-footer">
+              <div class="pull-left">
+                <%= link_to 'Profile', edit_admin_user_path(current_user), class: 'btn btn-default -btn-flat' %>
+              </div>
+              <div class="pull-right">
+                <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'btn btn-default btn-flat' %>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>

@@ -1,0 +1,23 @@
+<div class="form-group">
+  <%= f.label :email %>
+  <%= f.email_field :email, class: "form-control", placeholder: "Enter email", required: true %>
+  <span class="help-block"><i>* This field is required</i><span>
+</div>
+
+<div class="form-group">
+  <%= f.label :password %>
+  <%= f.password_field :password, class: "form-control", placeholder: "Enter password", required: (@user.new_record? ? true : false) %>
+  <span class="help-block"><i>* This field is required (leave blank if you are editing and don't want to change the password)</i><span>
+</div>
+
+<div class="form-group">
+  <%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation, class: "form-control", placeholder: "Confirm password", required: (@user.new_record? ? true : false) %>
+  <span class="help-block"><i>* This field is required (leave blank if you are editing and don't want to change the password)</i><span>
+</div>
+
+<div class="form-group">
+  <%= f.label :name %>
+  <%= f.text_field :name, class: "form-control", placeholder: "Enter name", required: true %>
+  <span class="help-block"><i>* This field is required</i><span>
+</div>
