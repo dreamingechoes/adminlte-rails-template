@@ -1,17 +1,6 @@
 Adminlte Rails Template
 =======================
 
-Ruby on Rails
--------------
-
-This application requires:
-
-- Ruby 2.3.3
-- Rails 5.0.0.1
-
-About
------
-
 This is just a simple Rails template application of an admin panel with the [AdminLTE](https://almsaeedstudio.com/) (v.2.3.7) theme integrated to use as a starting point for your application.
 
 Main features included by default:
@@ -21,7 +10,7 @@ Main features included by default:
 - [SendGrid](https://github.com/stephenb/sendgrid) gem for mailing.
 - Continuous testing with [Guard](https://github.com/guard/guard).
 - Puma server.
-- MySQL database.
+- PostgreSQL database.
 - ERB template engine.
 
 There is an user example ready to use to login with email `user@example.com` and password `123456789`.
@@ -40,12 +29,34 @@ Original author
 
 Iván González, *a.k.a* [dreamingechoes](https://github.com/dreamingechoes)
 
-Getting Started
----------------
+Setup development environment with Docker
+-----------------------------------------
+
+This project is Docker friendly. To start working on it:
+
+* Setup the web container with `docker-compose build web`
+* Create database with `docker-compose run web rake db:create`
+* Execute migrations with `docker-compose run web rake db:migrate`
+* Start the application with `docker-compose up`
+
+If you want to create an example user with the proper service, just execute:
+
+```sh
+user@computer:/YOUR_APP_NAME_HERE$ docker-compose run web rails c
+```
+
+and on the Rails console execute:
+
+```sh
+[1] pry(main)> CreateAdminService.new.call
+```
+
+Regular development environment setup
+-------------------------------------
 
 To start using this template, you only have to do the typical ***Rails*** things:
 
-* Install ***Ruby*** version 2.3.3 (using [RVM](https://github.com/rvm/rvm) or [RBenv](https://github.com/sstephenson/rbenv) or [asdf](https://github.com/asdf-vm/asdf) or whatever).
+* Install ***Ruby*** version 2.4.0 (using [RVM](https://github.com/rvm/rvm) or [RBenv](https://github.com/sstephenson/rbenv) or [asdf](https://github.com/asdf-vm/asdf) or whatever).
 
 * Clone the repo and do the ***bundle install*** thing:
 
@@ -54,6 +65,7 @@ user@computer:~$ git clone git@github.com:dreamingechoes/adminlte-rails-template
 user@computer:~$ cd YOUR_APP_NAME_HERE
 user@computer:/YOUR_APP_NAME_HERE$ bundle install
 ```
+
 Duplicate all the `.example` files on the project (`config/database.yml.example`, `config/secrets.yml.example`, `.env.example`, ...) removing the `.example` extension, and complete them with the proper information. Then execute this to create the database:
 
 ```sh
