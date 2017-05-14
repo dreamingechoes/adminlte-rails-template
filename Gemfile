@@ -1,17 +1,18 @@
 source 'https://rubygems.org'
 
 # Ruby version
-ruby '2.3.3'
+ruby '2.4.0'
 
 # General list of gems
-gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
-gem 'puma', '~> 3.0'
-gem 'sass-rails', '~> 5.0'
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.2'
+gem 'rails', '5.0.2'
+gem 'pg'
+gem 'puma'
+gem 'sass-rails'
+gem 'uglifier'
+gem 'coffee-rails'
 gem 'jquery-rails'
-gem 'turbolinks', '~> 5'
-gem 'jbuilder', '~> 2.5'
+gem 'turbolinks'
+gem 'jbuilder'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'dotenv-rails'
 gem 'devise'
@@ -22,7 +23,6 @@ gem 'friendly_id'
 
 # Only Development env gems
 group :development do
-  gem 'mysql2', '~> 0.3.18'
   gem 'better_errors'
   gem 'foreman'
   gem 'rails_layout'
@@ -31,7 +31,7 @@ group :development do
   gem 'rb-inotify', require: false
   gem 'spring-commands-rspec'
   gem 'web-console'
-  gem 'listen', '~> 3.0.5'
+  gem 'listen'
 
   # Guard
   gem 'guard-bundler'
@@ -40,7 +40,7 @@ group :development do
 
   # Spring
   gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'spring-watcher-listen'
 
   # Pry
   gem 'pry-rails'
@@ -60,7 +60,6 @@ end
 
 # Only Production env gems
 group :production do
-  gem 'pg'
   gem 'unicorn'
 end
 
