@@ -1,16 +1,16 @@
 /*
  * Globals
  */
-
 /* Links */
-
-a, a:focus, a:hover {
+a,
+a:focus,
+a:hover {
   color: #fff;
 }
-
 /* Custom default button */
-
-.btn-default, .btn-default:hover, .btn-default:focus {
+.btn-default,
+.btn-default:focus,
+.btn-default:hover {
   color: #333;
   text-shadow: none;
   /* Prevent inheritance from `body` */
@@ -21,12 +21,11 @@ a, a:focus, a:hover {
 .lead a {
   text-decoration: underline;
 }
-
 /*
  * Base structure
  */
-
-html, body {
+body,
+html {
   height: 100%;
   background-color: #333;
 }
@@ -36,9 +35,7 @@ body {
   text-align: center;
   text-shadow: 0 1px 3px rgba(0, 0, 0, .5);
 }
-
 /* Extra markup and styles for table-esque vertical and horizontal centering */
-
 .site-wrapper {
   display: table;
   width: 100%;
@@ -58,31 +55,27 @@ body {
   margin-right: auto;
   margin-left: auto;
 }
-
 /* Padding for spacing */
-
 .inner {
   padding: 30px;
 }
-
 /*
  * Header
  */
-
 .masthead-brand {
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-.masthead-nav>li {
+.masthead-nav > li {
   display: inline-block;
 }
 
-.masthead-nav>li+li {
+.masthead-nav > li+li {
   margin-left: 20px;
 }
 
-.masthead-nav>li>a {
+.masthead-nav > li > a {
   padding-right: 0;
   padding-left: 0;
   font-size: 16px;
@@ -93,30 +86,31 @@ body {
   border-bottom: 2px solid transparent;
 }
 
-.masthead-nav>li>a:hover, .masthead-nav>li>a:focus {
+.masthead-nav > li > a:focus,
+.masthead-nav > li > a:hover {
   background-color: transparent;
   border-bottom-color: #a9a9a9;
   border-bottom-color: rgba(255, 255, 255, .25);
 }
 
-.masthead-nav>.active>a, .masthead-nav>.active>a:hover, .masthead-nav>.active>a:focus {
+.masthead-nav > .active > a,
+.masthead-nav > .active > a:focus,
+.masthead-nav > .active > a:hover {
   color: #fff;
   border-bottom-color: #fff;
 }
-
 @media (min-width: 768px) {
   .masthead-brand {
     float: left;
   }
+
   .masthead-nav {
     float: right;
   }
 }
-
 /*
  * Cover
  */
-
 .cover {
   padding: 0 20px;
 }
@@ -125,27 +119,24 @@ body {
   padding: 10px 20px;
   font-weight: bold;
 }
-
 /*
  * Footer
  */
-
 .mastfoot {
   color: #999;
   /* IE8 proofing */
   color: rgba(255, 255, 255, .5);
 }
-
 /*
  * Affix and center
  */
-
 @media (min-width: 768px) {
   /* Pull out the header and footer */
   .masthead {
     position: fixed;
     top: 0;
   }
+
   .mastfoot {
     position: fixed;
     bottom: 0;
@@ -155,14 +146,17 @@ body {
     vertical-align: middle;
   }
   /* Handle the widths */
-  .masthead, .mastfoot, .cover-container {
+  .cover-container,
+  .mastfoot,
+  .masthead {
     width: 100%;
     /* Must be percentage or pixels for horizontal alignment */
   }
 }
-
 @media (min-width: 992px) {
-  .masthead, .mastfoot, .cover-container {
+  .cover-container,
+  .mastfoot,
+  .masthead {
     width: 700px;
   }
 }

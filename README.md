@@ -51,7 +51,7 @@ user@computer:/YOUR_APP_NAME_HERE$ rake db:setup
 user@computer:/YOUR_APP_NAME_HERE$ rake db:seed
 ```
 
-And you're ready to go. Test if all it's ok by starting a server and check it with `rails s`. To enable any AdminLTE plugin, just simply open the `assets/javascripts/application_back.js` and `assets/stylesheets/application_back.css` manifest files to require the neccesary asset files.
+And you're ready to go. Test if all it's ok by starting a server and check it with `rails s`. To enable any AdminLTE plugin, just simply open the `assets/javascripts/application_back.js` and `assets/stylesheets/application_back.scss` manifest files to require the needed asset files.
 
 You can see the complete documentation of the AdminLTE theme [here](https://almsaeedstudio.com/themes/AdminLTE/documentation/index.html) in order to add all the widgets that you need for your application.
 
@@ -68,7 +68,7 @@ This project is Docker friendly, so if you want to use Docker with this template
 If you want to create an example user with the proper service, just execute:
 
 ```sh
-user@computer:/YOUR_APP_NAME_HERE$ docker-compose run web rails c
+user@computer:/YOUR_APP_NAME_HERE$ docker-compose exec web rails c
 ```
 
 and on the Rails console execute:
